@@ -1,0 +1,18 @@
+@use 'abstracts/colors';
+@use 'abstracts/mixins';
+
+.machine-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    height: stretch;
+    position: relative;
+
+  .machine-icon {
+    font-size: 4rem;
+    }
+
+  @include mixins.machine-states;
+}

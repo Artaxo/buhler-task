@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+// Abstracts
+@forward 'styles/abstracts/colors';
+@forward 'styles/abstracts/mixins';
+
+// Base
+@forward 'styles/base/layout';
+@forward 'styles/base/typography';
+
+// Components
+@forward 'styles/components/machine_card';

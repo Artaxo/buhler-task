@@ -1,4 +1,4 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, inject, OnInit, signal } from '@angular/core';
 import { ToolbarComponent } from './shared/components/toolbar/toolbar.component';
 import { MachineLinePageComponent } from './pages/machine-line-page/machine-line-page.component';
 import { NavigationComponent } from './shared/components/navigation/navigation.component';
@@ -11,7 +11,7 @@ import { downloadJson } from './shared/utils/utils';
   styleUrl: './app.scss',
   templateUrl: './app.html',
 })
-export class App {
+export class App implements OnInit{
   private readonly machinesStore = inject(MachinesStateStore);
   machines = this.machinesStore.machines;
 

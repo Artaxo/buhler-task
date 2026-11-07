@@ -1,0 +1,35 @@
+@use 'abstracts/colors';
+@use 'abstracts/mixins';
+
+:host {
+  display: flex;
+  flex-direction: row;
+  height: 80px;
+  background: colors.$background-secondary;
+}
+
+.navigation-item {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 150px;
+  align-items: center;
+  width: 150px;
+  justify-content: end;
+  font-size: 1.5rem;
+
+  @include mixins.machine-states;
+}
+
+.navigation-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.download {
+  cursor: pointer;
+  padding-right: 24px;
+  align-self: center;
+}

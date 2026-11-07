@@ -1,0 +1,17 @@
+<div class="navigation-wrapper">
+  <div style="display: flex; flex-direction: row">
+    @for (machine of machines(); track machine.id) {
+    <div [ngClass]="machineState(machine)?.cssClass" class="navigation-item">
+    <span class="material-symbols-outlined state-icon">
+      {{ machineState(machine)?.icon }}
+    </span>
+      <span>{{machine?.type}}</span>
+    </div>
+    }
+  </div>
+  <div class="download">
+  <span (click)="downloadJson()" title="Download" class="material-symbols-outlined">
+    download
+  </span>
+  </div>
+</div>

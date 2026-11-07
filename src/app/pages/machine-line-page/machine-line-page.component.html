@@ -1,0 +1,15 @@
+<div class="machines-wrapper">
+  @for (machine of machines(); track machine.id) {
+    <div class="machine-wrapper">
+      <app-machine-card [machine]="machine" />
+    </div>
+    @if (!$last) {
+      <div class="connection"></div>
+    }
+  }
+  @empty {
+    <div class="empty">
+      No machines loaded
+    </div>
+  }
+</div>

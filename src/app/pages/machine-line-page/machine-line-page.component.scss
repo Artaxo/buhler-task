@@ -1,0 +1,35 @@
+@use 'abstracts/colors';
+
+.machines-wrapper {
+  display: grid;
+  grid-template-columns: repeat(11, minmax(40px, 1fr));
+  gap: 0;
+  width: 100%;
+  align-items: center;
+
+  .machine-wrapper {
+    grid-column: span 2;
+    text-align: center;
+    aspect-ratio: 1 / 1;
+    height: max(14vw, 150px)
+  }
+
+  .connection {
+    grid-column: span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    &::before {
+      content: '';
+      width: 100%;
+      height: 6px;
+      background-color: colors.$line;
+    }
+  }
+}
+
+.empty {
+  position: absolute;
+}

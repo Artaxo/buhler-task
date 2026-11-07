@@ -1,0 +1,10 @@
+
+<div [ngClass]="machineState?.cssClass" class="machine-card" >
+  <span class="material-symbols-outlined state-icon">
+      {{ machineState?.icon }}
+  </span>
+  <span class="material-symbols-outlined machine-icon">
+      {{ machineIcon }}
+  </span>
+  <span>{{ machine()?.type }}</span>
+</div>

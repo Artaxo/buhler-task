@@ -1,0 +1,31 @@
+@use 'abstracts/colors';
+
+.toolbar {
+  display: flex;
+  height: 80px;
+  box-sizing: border-box;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+  background: colors.$background-secondary;
+  border-bottom: solid 8px colors.$buhler;
+
+  .align-left {
+    display: flex;
+  }
+
+  .align-right {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .user-info {
+    display: flex;
+    font-size: 1rem;
+    font-weight: bolder;
+    gap: 0.5rem;
+    flex-direction: row;
+  }
+}
